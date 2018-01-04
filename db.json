@@ -1,0 +1,43 @@
+{
+  "movies": [
+    {
+      "title": "The Lord of the Rings",
+      "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle Earth from the Dark Lord Sauron.",
+      "year": 2001,
+      "director": "Peter Jackson",
+      "genre": "Adventure",
+      "runtime": 156,
+      "language": "English",
+      "subtitles": "English",
+      "added": "2017-12-13T08:06:03.253Z",
+      "clickCount": 18,
+      "id": 1
+    },
+    {
+      "title": "The new movie",
+      "description": "Something",
+      "year": 1990,
+      "director": "John",
+      "genre": "Adventure",
+      "runtime": 90,
+      "language": "English",
+      "subtitles": "Danish",
+      "added": "2017-12-25T20:57:45.689Z",
+      "clickCount": 0,
+      "id": 9
+    },
+    {
+      "title": "The Shining",
+      "description": "Jack Nicholson does weird stuff.",
+      "year": 1980,
+      "director": "John Johnson",
+      "genre": "Weird Stuff",
+      "runtime": 120,
+      "language": "English",
+      "subtitles": "Danish",
+      "added": "2018-01-04T08:12:47.583Z",
+      "clickCount": 0,
+      "id": 10
+    }
+  ]
+}

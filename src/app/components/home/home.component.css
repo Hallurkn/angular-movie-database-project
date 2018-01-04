@@ -1,0 +1,9 @@
+.hero-block {
+  display: inline-block;
+}
+
+.zing {
+  background-color: transparent;
+  transition: background-color 2s ease;
+  box-shadow: 0 5px 20px -10px #ccc;
+}

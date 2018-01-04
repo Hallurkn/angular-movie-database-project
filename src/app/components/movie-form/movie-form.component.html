@@ -1,0 +1,76 @@
+<div class="card col col-md-6 offset-md-3 bg-faded box-shadow">
+  <div class="card-block">
+    <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm)">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="title" id="title" [(ngModel)]="movie.title" #title="ngModel" placeholder="ex. The Lord of the Rings"
+          required>
+        <div class="alert alert-danger" [hidden]="title.valid || title.pristine">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea form="movieForm" class="form-control " type="textarea" name="description" id="description" [(ngModel)]="movie.description"
+          #description="ngModel" placeholder="ex. Hobbit finds ring, stuff gets weird." required></textarea>
+        <div class="alert alert-danger" [hidden]="description.valid || description.pristine">This field is required</div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col col-md-6">
+          <label for="year">Year</label>
+          <input class="form-control " type="number" name="year" id="year" placeholder="ex. 2001" [(ngModel)]="movie.year" #year="ngModel"
+            required minlength="4" maxlength="4">
+          <div class="alert alert-danger" [hidden]="year.valid || year.pristine">This field is required</div>
+        </div>
+
+        <div class="form-group col col-md-6">
+          <label for="runtime">Runtime</label>
+          <input class="form-control " type="number" name="runtime" id="runtime" placeholder="ex. 156" [(ngModel)]="movie.runtime"
+            #runtime="ngModel" required>
+          <div class="alert alert-danger" [hidden]="runtime.valid || runtime.pristine">This field is required</div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="director">Director</label>
+        <input class="form-control " type="text" name="director" id="director" placeholder="ex. Peter Jackson" [(ngModel)]="movie.director"
+          #director="ngModel" required>
+        <div class="alert alert-danger" [hidden]="director.valid || director.pristine">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <input class="form-control " type="text" name="genre" id="genre" placeholder="ex. Adventure" [(ngModel)]="movie.genre" #genre="ngModel"
+          required>
+        <div class="alert alert-danger" [hidden]="genre.valid || genre.pristine">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language</label>
+        <input class="form-control " type="text" name="language" id="language" placeholder="ex. English" [(ngModel)]="movie.language"
+          #language="ngModel" required>
+        <div class="alert alert-danger" [hidden]="language.valid || language.pristine">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="subtitles">Subtitles</label>
+        <input class="form-control " type="text" name="subtitles" id="subtitles" placeholder="ex. Danish" [(ngModel)]="movie.subtitles"
+          #subtitles="ngModel" required>
+        <div class="alert alert-danger" [hidden]="subtitles.valid || subtitles.pristine">This field is required</div>
+      </div>
+
+      <!-- <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" class="form-control-file" name="image" id="image" aria-describedby="fileHelp" [(ngModel)]="movie.image"
+              #image="ngModel" required>
+            <small id="fileHelp" class="form-text text-muted">Upload an image to display as the movie poster.</small>
+            <div class="alert alert-danger" [hidden]="image.valid || image.pristine">This field is required</div>
+          </div> -->
+
+      <button class="btn btn-success" type="submit" [disabled]="!movieForm.form.valid">Submit</button>
+      <button class="btn btn-secondary" type="button" (click)="cancelForm(movieForm)">Cancel</button>
+    </form>
+
+  </div>
+</div>

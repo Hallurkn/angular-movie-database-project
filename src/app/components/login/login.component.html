@@ -1,0 +1,16 @@
+<div class="col col-md-4 offset-md-4 mt-5">
+  <h4 class="lead">Login</h4>
+  <div class="card box-shadow bg-faded">
+    <div class="card-block">
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="form-group">
+          <label for="role">Select Role</label>
+          <select class="form-control" id="role" name="role" [(ngModel)]="role" required>
+            <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+          </select>
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

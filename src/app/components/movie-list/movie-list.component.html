@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Year</th>
+      <th>Runtime</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <th scope="row">{{movie.id}}</th>
+      <td>{{movie.title}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.runtime}} min</td>
+      <td>
+        <a class="btn btn-info btn-sm" routerLink="/movies/{{movie.id}}" (click)="onDetailsClick(movie)">
+          <span class="jam jam-info"></span>
+        </a>
+        <a *ngIf="userRole === 'Admin'" class="btn btn-warning btn-sm" routerLink="/movies/edit/{{movie.id}}">
+          <span class="jam jam-pencil"></span>
+        </a>
+        <button *ngIf="userRole === 'Admin'" class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)">
+          <span class="jam jam-trash"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

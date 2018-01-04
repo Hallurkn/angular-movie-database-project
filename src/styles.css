@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('./../node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('./../node_modules/jam-icons/css/jam-icons.min.css');
+.jam:before {
+  position: relative;
+  top: 1px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.nav-pills .nav-item.show .nav-link,
+.nav-pills .nav-link.active {
+  background-color: white;
+  color: #000000;
+}
+
+a {
+  color: #535353;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.box-shadow {
+  position: relative;
+  box-shadow: 0 0 20px -10px #707070;
+}
+
+.box-hover {
+  transition: box-shadow 0.3s ease, bottom 0.3s ease;
+  bottom: 0;
+}
+
+.box-hover:hover {
+  bottom: 2px;
+  box-shadow: 0 5px 30px -10px #707070
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a7a7a7 !important;
+  font-size: 0.9rem;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

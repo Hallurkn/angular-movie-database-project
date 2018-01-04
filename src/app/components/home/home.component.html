@@ -1,0 +1,31 @@
+<div class="container-fluid py-5 bg-brand">
+  <div class="container text-center">
+    <h1 class="display-1">Movster</h1>
+    <p class="lead">All the
+      <span class="jam jam-video-camera-vintage px-2"></span> your heart
+      <span class="zing" [style.background]="bgColors[wordIndex]">{{zingWords[wordIndex]}}.</span>
+    </p>
+    <blockquote class="blockquote hero-block">
+      <p class="mb-0">Your go to website for awesome movie stuff.</p>
+      <footer class="blockquote-footer">Someone that loves movies
+        <cite title="Source Title">The Movie Magazine</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="new-movies col col-12 mb-5">
+      <h3 class="lead">Recently added movies</h3>
+      <app-new-movies></app-new-movies>
+    </div>
+
+    <hr>
+
+    <div class="popular-movies col col-12 mb-5">
+      <h3 class="lead">Popular movies</h3>
+      <app-popular-movies></app-popular-movies>
+    </div>
+  </div>
+</div>
