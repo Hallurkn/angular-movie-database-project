@@ -29,7 +29,11 @@ export class MovieFormComponent implements OnInit {
 
   private onSubmit(form) {
     if (form.valid) {
-      this.data.addMovie(this.movie).subscribe();
+      if (this.movie.id) {
+        this.data.updateMovie(this.movie).subscribe();
+      } else {
+        this.data.addMovie(this.movie).subscribe();
+      }
       this.router.navigate(['movies']);
     }
   }

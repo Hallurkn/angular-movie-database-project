@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  private role = 'User';
+  private role = 'Admin';
 
   private roles = ['User', 'Admin'];
 

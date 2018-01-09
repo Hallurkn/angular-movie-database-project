@@ -20,6 +20,7 @@ export class MovieListComponent implements OnInit {
   ngOnInit(): void {
     this.data.movies.subscribe(movieData => {
       this.movies = movieData;
+      console.log('init', movieData);
     });
     this.userRole = this.parentComponent.userRole;
   }
@@ -38,9 +39,6 @@ export class MovieListComponent implements OnInit {
 
   onDetailsClick(movie) {
     movie.clickCount++;
-    this.data.updateMovie(movie)
-      .subscribe(data => {
-      }
-      );
+    this.data.updateMovie(movie).subscribe();
   }
 }

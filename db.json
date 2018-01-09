@@ -10,24 +10,11 @@
       "language": "English",
       "subtitles": "English",
       "added": "2017-12-13T08:06:03.253Z",
-      "clickCount": 18,
+      "clickCount": 21,
       "id": 1
     },
     {
-      "title": "The new movie",
-      "description": "Something",
-      "year": 1990,
-      "director": "John",
-      "genre": "Adventure",
-      "runtime": 90,
-      "language": "English",
-      "subtitles": "Danish",
-      "added": "2017-12-25T20:57:45.689Z",
-      "clickCount": 0,
-      "id": 9
-    },
-    {
-      "title": "The Shining",
+      "title": "The Jesus",
       "description": "Jack Nicholson does weird stuff.",
       "year": 1980,
       "director": "John Johnson",
@@ -36,8 +23,21 @@
       "language": "English",
       "subtitles": "Danish",
       "added": "2018-01-04T08:12:47.583Z",
-      "clickCount": 0,
+      "clickCount": 2,
       "id": 10
+    },
+    {
+      "title": "New Movie",
+      "description": "Something awesome and new.",
+      "year": 2018,
+      "director": "Jesus Christ Himself",
+      "genre": "Fiction (duh)",
+      "runtime": 90,
+      "language": "English",
+      "subtitles": "Hebrew",
+      "added": "2018-01-04T10:49:57.841Z",
+      "clickCount": 3,
+      "id": 11
     }
   ]
 }
