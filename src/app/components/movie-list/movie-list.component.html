@@ -1,4 +1,4 @@
-<table class="table movies-e2e">
+<table class="table">
   <thead>
     <tr>
       <th>#</th>
@@ -10,9 +10,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let movie of movies">
+    <tr *ngFor="let movie of movies; let movieIndex = index" class="movie-e2e">
       <th scope="row">{{movie.id}}</th>
-      <td>{{movie.title}}</td>
+      <td id="e2e-title-{{movieIndex}}">{{movie.title}}</td>
       <td>{{movie.director}}</td>
       <td>{{movie.year}}</td>
       <td>{{movie.runtime}} min</td>
@@ -20,12 +20,18 @@
         <a class="btn btn-info btn-sm" routerLink="/movies/{{movie.id}}" (click)="onDetailsClick(movie)">
           <span class="jam jam-info"></span>
         </a>
-        <a *ngIf="userRole === 'Admin'" class="btn btn-warning btn-sm" routerLink="/movies/edit/{{movie.id}}">
+        <a class="btn btn-warning btn-sm" id="e2e-edit-{{movieIndex}}" routerLink="/movies/edit/{{movie.id}}">
           <span class="jam jam-pencil"></span>
         </a>
-        <button *ngIf="userRole === 'Admin'" class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)">
+        <button class="btn btn-danger btn-sm" id="e2e-delete-{{movieIndex}}" (click)="deleteMovie(movie.id)">
           <span class="jam jam-trash"></span>
         </button>
+        <!-- <a *ngIf="userRole === 'Admin'" class="btn btn-warning btn-sm" id="e2e-edit-{{movie.id}}" routerLink="/movies/edit/{{movie.id}}"> -->
+        <!-- <span class="jam jam-pencil"></span> -->
+        <!-- </a> -->
+        <!-- <button *ngIf="userRole === 'Admin'" class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)"> -->
+        <!-- <span class="jam jam-trash"></span> -->
+        <!-- </button>  -->
       </td>
     </tr>
   </tbody>

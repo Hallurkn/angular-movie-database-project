@@ -10,7 +10,7 @@
 
       <div class="form-group">
         <label for="description">Description</label>
-        <textarea form="movieForm" class="form-control " type="textarea" name="description" id="description" [(ngModel)]="movie.description"
+        <textarea form="movieForm" class="form-control" type="textarea" name="description" id="description" [(ngModel)]="movie.description"
           #description="ngModel" placeholder="ex. Hobbit finds ring, stuff gets weird." required></textarea>
         <div class="alert alert-danger" [hidden]="description.valid || description.pristine">This field is required</div>
       </div>
@@ -25,7 +25,7 @@
 
         <div class="form-group col col-md-6">
           <label for="runtime">Runtime</label>
-          <input class="form-control " type="number" name="runtime" id="runtime" placeholder="ex. 156" [(ngModel)]="movie.runtime"
+          <input class="form-control " type="number" name="runtime" id="runtime" maxlength="3" placeholder="ex. 156" [(ngModel)]="movie.runtime"
             #runtime="ngModel" required>
           <div class="alert alert-danger" [hidden]="runtime.valid || runtime.pristine">This field is required</div>
         </div>
@@ -68,7 +68,7 @@
             <div class="alert alert-danger" [hidden]="image.valid || image.pristine">This field is required</div>
           </div> -->
 
-      <button class="btn btn-success" type="submit" [disabled]="!movieForm.form.valid">Submit</button>
+      <button class="btn btn-success" id="submit-e2e" type="submit" [disabled]="!movieForm.form.valid">Submit</button>
       <button class="btn btn-secondary" type="button" (click)="cancelForm(movieForm)">Cancel</button>
     </form>
 

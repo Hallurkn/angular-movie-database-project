@@ -13,13 +13,13 @@ export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     {
-        path: 'movies', component: MoviesComponent, canActivate: [UserGuardService],
+        path: 'movies', component: MoviesComponent, /* canActivate: [UserGuardService], */
         children: [
             { path: '', redirectTo: 'list', pathMatch: 'full' },
             { path: 'list', component: MovieListComponent },
             { path: 'cards', component: MovieCardComponent },
-            { path: 'create', component: MovieFormComponent, canActivate: [AdminGuardService] },
-            { path: 'edit/:id', component: MovieFormComponent, canActivate: [AdminGuardService] },
+            { path: 'create', component: MovieFormComponent, /* canActivate: [AdminGuardService] */ },
+            { path: 'edit/:id', component: MovieFormComponent, /* canActivate: [AdminGuardService] */ },
             { path: ':id', component: MovieDetailsComponent },
         ]
     },
