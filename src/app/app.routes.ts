@@ -1,11 +1,11 @@
 import { LoginComponent } from './components/login/login.component';
 import { Routes } from '@angular/router/src/config';
 import { HomeComponent } from './components/home/home.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
-import { MovieFormComponent } from './components/movie-form/movie-form.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
+import { MovieFormComponent } from './components/movies/movie-form/movie-form.component';
+import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
 import { MoviesComponent } from './components/movies/movies.component';
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieCardComponent } from './components/movies/movie-card/movie-card.component';
 import { AdminGuardService } from './services/admin-guard.service';
 import { UserGuardService } from './services/user-guard.service';
 

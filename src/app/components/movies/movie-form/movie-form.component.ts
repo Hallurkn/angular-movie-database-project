@@ -1,7 +1,7 @@
-import { Movie } from './../../models/movie';
+import { Movie } from './../../../models/movie';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MovieDataService } from '../../services/movie-data.service';
+import { MovieDataService } from '../../../services/movie-data.service';
 
 @Component({
   selector: 'app-movie-form',

@@ -12,15 +12,15 @@ import { HttpModule } from '@angular/http';
 import { appRoutes } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
-import { MovieFormComponent } from './components/movie-form/movie-form.component';
 import { HomeComponent } from './components/home/home.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
-import { LoginComponent } from './components/login/login.component';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
 import { NewMoviesComponent } from './components/new-movies/new-movies.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { MovieFormComponent } from './components/movies/movie-form/movie-form.component';
+import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
+import { MovieCardComponent } from './components/movies/movie-card/movie-card.component';
+import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
